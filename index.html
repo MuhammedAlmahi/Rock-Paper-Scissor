@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="icons/title-icon.png" type="image/x-icon">
+    </head>
+
+    <body bgcolor="#1e1e1e">
+        <div class="div2"><h1>
+            <span>R</span><span>o</span><span>c</span><span>k</span>
+            <span>P</span><span>a</span><span>p</span><span>e</span><span>r</span>
+            <span>S</span><span>c</span><span>i</span><span>ss</span><span>o</span><span>r</span><span>s</span>
+        </h1></div>
+     <div>
+
+        <button class="buttons" onclick="
+            playGame('👊')
+            document.querySelector(`.Reset-button`).innerHTML = 'Reset Score';
+        "><img src="icons/Rock-icon.png" alt=""></button>
+    
+        <button class="buttons" onclick="
+            playGame('🖐️')
+            document.querySelector(`.Reset-button`).innerHTML = 'Reset Score';
+      "><img src="icons/Paper-icon.png" alt=""></button>
+
+    
+        <button class="buttons" onclick="
+            playGame('✌️')
+            document.querySelector('.Reset-button').innerHTML = 'Reset Score';
+      "><img src="icons/Scissor-icon.png" alt=""></button>
+    
+     </div>
+
+    <div class="result-div">
+        <p class="js-result"></p>
+    </div>
+
+    <div class="moves-div">
+        <p class="js-moves"></p>
+    </div>
+
+    <div class="Scores">
+        <p class="js-socer"></p>
+    </div> 
+
+     <div class="Reset-div">
+
+        <button class="Reset-button" id="Reset-button" onclick="
+            score.wins = 0
+            score.losses = 0
+            score.ties = 0
+
+            updateScoreElement();
+            
+            document.querySelector('.Reset-button').innerHTML = 'Done';
+            document.querySelector('.js-moves').innerHTML = '';
+            document.querySelector('.js-result').innerHTML = '';
+            ">
+            Reset Score
+        </button>
+         
+     </div>
+    
+
+     <script src="index.js"></script>
+
+    </body>
+</html> 
